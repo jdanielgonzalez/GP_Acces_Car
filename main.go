@@ -12,12 +12,7 @@ import (
 	"github.com/lib/pq"
 )
 
-/*
-vamos a implementar un servidor para una aplicacion ficticia que registra los
-comentarios que se hacen en una red social
-*/
 func main() {
-
 	conn, err := ConectarDB("postgres://postgres.lculrvhbuckpiauukcow:gpacar2024*@aws-0-us-west-1.pooler.supabase.com:6543/postgres", "postgres")
 	if err != nil {
 		log.Fatalln("error conectando a la base de datos", err.Error())
@@ -40,6 +35,7 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /crearusuario", handler.CrearUsuario())
+	mux.HandleFunc("POST /iniciarsesion", handler.IniciarSesion())
 	log.Fatal(http.ListenAndServe(":8081", mux))
 }
 
