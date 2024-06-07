@@ -1,0 +1,16 @@
+
+
+POST /crearusuario HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+
+{
+  "documento": "123456789",
+  "contraseña": "secreta123",
+  "nombres": "Juan",
+  "apellidos": "Pérez",
+  "celular": "555-1234",
+  "fecha_nacimiento": "1990-01-01",
+  "sexo": "masculino"
+}
+

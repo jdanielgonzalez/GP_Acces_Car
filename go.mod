@@ -1,4 +1,4 @@
-module github.com/camilocorreaUdeA/web_server_2
+module github.com/jdanielgonzalez/GP_Acces_Car
 
 go 1.22.0
 
